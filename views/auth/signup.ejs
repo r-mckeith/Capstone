@@ -1,0 +1,37 @@
+<nav class="navbar sticky-top navbar-inverse navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/playlist">
+      <img src="/images/Treble_Logo.png" width="150" height="60" alt="">
+    </a>
+    <ul class="nav">
+      <li class="nav-item nav-pills nav-fill">
+        <a class="nav-link" href="/">Log In</a>
+      </li>
+     </ul>
+  </div>
+</nav>
+
+<div class="container-fluid content">
+  <div class="col d-flex justify-content-center signup-form">
+    <form class="form-signin" action="/auth/signup" method="POST">
+      <div class="col-md-12">
+        <img class="mb-4" src="../images/Treble_Logo.png" alt="" width=".2erm" height="100">
+        <h1 class="h3 mb-3 font-weight-normal">Create A New Account</h1>
+        <div class="form-label-group">
+          <label for="new-name">Username</label>
+          <input type="text" id="new-name" name="name" class="form-control" placeholder="Username" required="" autofocus="">
+        </div>
+        <div class="form-label-group">
+          <label for="new-email">Email Address</label>
+          <input type="email" id="new-email" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
+        </div>
+        <div class="form-label-group">
+          <label for="new-password">Password</label>
+          <input type="password" id="new-password" class="form-control" placeholder="Password" name="password" required="">
+        </div>
+        <button class="btn btn-lg btn-primary home-btn" type="submit">Create New Account</button>
+        <p class="mt-5 mb-3 text-muted text-center">Treble© 2021</p>
+     </form>
+    </div>
+  </div>
+</div>
