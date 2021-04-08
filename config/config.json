@@ -1,12 +1,14 @@
 {
   "development": {
     "database": "treble_database",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "host": "db",
+    "dialect": "postgres",
+    "username": "postgres",
+    "password": "postgres"
   },
   "test": {
     "database": "treble_database",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "postgres"
   },
   "production": {

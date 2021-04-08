@@ -1,0 +1,17 @@
+version: "3.9"
+   
+services:
+  db:
+    image: rmckeith/postgres:latest
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    image: rmckeith/capstone:latest
+    command: ['npm', 'start']
+    volumes:
+      - .:/code
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
