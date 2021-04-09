@@ -5,6 +5,8 @@ services:
     image: rmckeith/postgres:latest
     ports:
       - "5432:5432"
+    volumes: 
+      - db-data:/var/lib/postgresql/data
   web:
     build: .
     image: rmckeith/capstone:latest
@@ -15,3 +17,6 @@ services:
       - "3000:3000"
     depends_on:
       - db
+volumes:
+  db-data:
+   
