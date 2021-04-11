@@ -23,6 +23,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                script {
+                  docker.withRegistry("", registryCredential) {
+                    dockerImage.push()
+                    dbDockerImage.push()
+                  }
+                }
             }
         }
     }
