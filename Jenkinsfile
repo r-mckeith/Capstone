@@ -11,8 +11,12 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh "docker info"
-                dockerImage = docker.build('rmckeith/capstone')  
-                dbDockerImage = docker.build('rmckeith/postgres', './db') 
+                script {
+                  dockerImage = docker.build('rmckeith/capstone')  
+                }
+                script {
+                  dbDockerImage = docker.build('rmckeith/postgres', './db') 
+                }
                 sh "docker images"
             }
         }
