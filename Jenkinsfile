@@ -31,5 +31,12 @@ pipeline {
                 }
             }
         }
+        stage('Cleanup') {
+            steps {
+                echo 'Cleaning up....'
+                sh "docker rmi rmckeith/capstone"
+                sh "docker rmi rmckeith/postgres"
+            }
+        }
     }
 }
