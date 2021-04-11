@@ -5,10 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                docker info
-                docker build -t rmckeith/capstone:${BUILD_NUMBER} .
-                docker tag rmckeith/capstone:${BUILD_NUMBER} rmckeith/capstone:latest
-                docker images
+                sh "docker info"
+                sh "docker build -t rmckeith/capstone:${BUILD_NUMBER} ."
+                sh "docker tag rmckeith/capstone:${BUILD_NUMBER} rmckeith/capstone:latest"
+                sh "docker images"
             }
         }
         stage('Test') {
